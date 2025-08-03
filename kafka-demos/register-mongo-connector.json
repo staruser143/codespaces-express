@@ -1,0 +1,19 @@
+{
+  "name": "mongo-multi-collections-to-unified-topic",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSourceConnector",
+    "connection.uri": "mongodb://mongo:27017",
+    "database": "db1",
+    "collection": "",
+    "pipeline": "[{\"$match\": {\"operationType\": {\"$in\": [\"insert\", \"update\", \"replace\"]}}}]",
+    "copy.existing": true,
+    "copy.existing.pipeline": "[{\"$match\": {}}]",
+    "publish.full.document.only": true,
+    "topic.naming.strategy": "static",
+    "topic": "unified-topic",
+    "namespace.regex": "db1\\.(quoteEvents|profileEvents)",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false
+  }
+}

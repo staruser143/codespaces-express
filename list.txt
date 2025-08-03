@@ -1,0 +1,4 @@
+access key: service.key
+access certiticate: service.cert
+CA certificate: ca.pem
+
