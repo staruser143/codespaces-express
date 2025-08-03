@@ -1,0 +1,2 @@
+curl -X PUT  http://localhost:8083/connectors/mongo-multi-collections-to-unified-topic/config  -H "Content-Type: application/json" --data @register-mongo-connector.json
+{"error_code":500,"message":"Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)\n at [Source: (org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCloseableInputStream); line: 1, column: 67] (through reference chain: java.util.LinkedHashMap[\"config\"])"}
