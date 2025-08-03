@@ -1,0 +1,6 @@
+
+(node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+Could not connect to database using connectionString: mongodb://mongo:27017/"
+(node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.18.0.4:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+  name: 'MongoNetworkError'
